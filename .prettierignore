@@ -1,0 +1,14 @@
+.cache
+package.json
+package-lock.json
+public
+LICENSE
+README.md
+public
+static
+yarn.lock
+out
+build
+node_modules
+.next
+.github
