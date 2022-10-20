@@ -136,11 +136,6 @@ const PostsData = ({ post }) => {
             href="https://fonts.gstatic.com"
             crossOrigin="anonymous"
           />
-          <link
-            rel="preconnect"
-            href="https://wishes-five.vercel.app/"
-            crossOrigin="anonymous"
-          />
         </Head>
         <div className="dark:bg-pink-200 dark:border-pink-200 bg-white rounded-2xl border shadow-xl p-10 max-w-lg mt-6">
           <Image
