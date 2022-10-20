@@ -17,7 +17,7 @@ Create Happy Diwali 🪔 Greeting Wishes with Name in image.
 
 We have Sperate API for image and Greeting Name Generator
 
-For more check - <https://github.com/mskian/get-user>
+For more check - `/pages/api/wish/`
 
 ## Installation 📦
 
