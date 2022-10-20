@@ -6,6 +6,7 @@ import "react-toastify/dist/ReactToastify.css"
 import { CopyToClipboard } from "react-copy-to-clipboard"
 import slugify from "slugify"
 import Image from "next/image"
+import { server } from "../config"
 
 const PostsData = ({ post }) => {
   const router = useRouter()
@@ -209,7 +210,7 @@ const PostsData = ({ post }) => {
 export default PostsData
 
 export const getStaticProps = async ({ params }) => {
-  const data = await fetch(`https://wishes-five.vercel.app/${params.slug}`)
+  const data = await fetch(`${server}/api/wish/${params.slug}`)
   const post = await data.json()
   if (!post) {
     return {
@@ -224,7 +225,7 @@ export const getStaticProps = async ({ params }) => {
 }
 
 export const getStaticPaths = async () => {
-  const response = await fetch("https://wishes-five.vercel.app/")
+  const response = await fetch(`${server}/api/wish/`)
   const posts = await response.json()
   if (!posts) {
     return {
