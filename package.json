@@ -10,6 +10,7 @@
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\""
   },
   "dependencies": {
+    "canvas": "^2.10.1",
     "next": "12.3.1",
     "react": "18.2.0",
     "react-copy-to-clipboard": "^5.1.0",

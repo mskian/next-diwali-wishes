@@ -8,6 +8,6 @@ module.exports = {
     buildActivityPosition: "bottom-right",
   },
   images: {
-    domains: ["images.weserv.nl"],
+    domains: ["images.weserv.nl", "localhost", "diwali.sanweb.info"],
   },
 }

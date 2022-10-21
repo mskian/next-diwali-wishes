@@ -94,10 +94,7 @@ const PostsData = ({ post }) => {
           <meta property="og:url" content={canonicalUrl} />
           <meta
             property="og:image"
-            content={
-              "https://images.weserv.nl/?url=https://img.sanweb.info/dw/dw?name=" +
-              post[0].slug
-            }
+            content={server + `/api/image/` + post[0].slug + `/`}
           />
           <meta property="og:image:alt" content={post[0].content} />
           <link
@@ -118,11 +115,6 @@ const PostsData = ({ post }) => {
           <meta name="apple-mobile-web-app-title" content="Happy Diwali" />
           <link
             rel="preconnect"
-            href="https://images.weserv.nl/"
-            crossOrigin="anonymous"
-          />
-          <link
-            rel="preconnect"
             href="https://img.sanweb.info/"
             crossOrigin="anonymous"
           />
@@ -139,10 +131,7 @@ const PostsData = ({ post }) => {
         </Head>
         <div className="dark:bg-pink-200 dark:border-pink-200 bg-white rounded-2xl border shadow-xl p-10 max-w-lg mt-6">
           <Image
-            src={
-              `https://images.weserv.nl/?url=https://img.sanweb.info/dw/dw?name=` +
-              post[0].slug
-            }
+            src={server + `/api/image/` + post[0].slug + `/`}
             alt={post[0].content}
             placeholder="blur"
             blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg=="
@@ -154,8 +143,11 @@ const PostsData = ({ post }) => {
             <a
               className="bg-purple-500 hover:bg-yellow-600 rounded-full py-2 px-4 text-gray-100 transition-colors focus:outline-none outline-none mt-4 font-bold"
               href={
-                `https://download.mskian.com/image/download.php?url=https://images.weserv.nl/?url=https://img.sanweb.info/dw/dw?name=` +
-                post[0].slug
+                `https://download.mskian.com/image/download.php?url=` +
+                server +
+                `/api/image/` +
+                post[0].slug +
+                `/`
               }
               target="_blank"
               rel="nofollow noreferrer noopener"

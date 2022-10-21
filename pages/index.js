@@ -5,6 +5,7 @@ import { ToastContainer, toast } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
 import slugify from "slugify"
 import Image from "next/image"
+import { server } from "../config"
 
 export default function Index2() {
   const [quotesid, setInput] = useState("")
@@ -64,7 +65,7 @@ export default function Index2() {
           <meta property="og:url" content={canonicalUrl} />
           <meta
             property="og:image"
-            content="https://images.weserv.nl/?url=https://img.sanweb.info/dw/dw?name=Your-Name"
+            content={server + `/api/image/Your-Name/`}
           />
           <meta property="og:image:alt" content="Happy Diwali" />
           <link
@@ -85,11 +86,6 @@ export default function Index2() {
           <meta name="apple-mobile-web-app-title" content="Happy Diwali" />
           <link
             rel="preconnect"
-            href="https://images.weserv.nl/"
-            crossOrigin="anonymous"
-          />
-          <link
-            rel="preconnect"
             href="https://img.sanweb.info/"
             crossOrigin="anonymous"
           />
@@ -106,7 +102,7 @@ export default function Index2() {
         </Head>
         <div className="dark:bg-pink-200 dark:border-pink-200 bg-white rounded-2xl border shadow-xl p-10 max-w-lg mt-6">
           <Image
-            src="https://images.weserv.nl/?url=https://img.sanweb.info/dw/dw?name=Your-Name"
+            src={server + `/api/image/Your-Name/`}
             alt="Happy Diwali"
             placeholder="blur"
             blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg=="
